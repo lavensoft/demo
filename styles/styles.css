@@ -1,0 +1,413 @@
+.post-card-detail {
+    width: 100%;
+    display: flex;
+    padding: 32px 0;
+    border-bottom: 1px solid #d2d2d7;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.post-card-detail:last-child {
+    border: none;
+}
+
+.post-card-detail .banner-container {
+    width: 160px;
+    height: 96px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 24px;
+}
+
+.post-card-detail .banner-container .banner {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-transition: transform 400ms cubic-bezier(0.4, 0, 0.25, 1) 0ms;
+    transition: transform 400ms cubic-bezier(0.4, 0, 0.25, 1) 0ms;
+    position: relative;
+}
+
+.post-card-detail .information {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card-detail .information .tag {
+    font-size: 12px;
+    color: #6e6e73;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.post-card-detail .information .title {
+    font-size: 17px;
+    font-weight: 700;
+    -webkit-transition: opacity 400ms cubic-bezier(0.4, 0, 0.25, 1) 0ms;
+    transition: opacity 400ms cubic-bezier(0.4, 0, 0.25, 1) 0ms;
+    color: #000;
+}
+
+.post-card-detail .information .date {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 8px;
+    color: #6e6e73;
+}
+
+.post-container-first-tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px;
+    margin-top: 32px;
+}
+
+.post-container-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+    margin-top: 28px;
+}
+
+.post-card {
+    width: 100%;
+    position: relative;
+    display: block;
+    transition: all .25s ease;
+}
+
+.post-card:active {
+    transform: scale(.95);
+}
+
+.post-card .banner-container {
+    overflow: hidden;
+    display: block;
+    border-radius: 15px;
+}
+
+.post-card .banner-container .banner {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition: transform 400ms cubic-bezier(0.4, 0, 0.25, 1) 0ms;
+    transition: transform 400ms cubic-bezier(0.4, 0, 0.25, 1) 0ms;
+    position: relative;
+}
+
+.post-card.small-p .banner-container .banner {
+    height: 205px;
+}
+
+.post-card .information {
+    box-sizing: border-box;
+    padding: 20px 12px;
+}
+
+.post-card .information .title {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: .009em;
+    margin-top: 8px;
+    color: #1d1d1f;
+    text-decoration: none;
+    -webkit-transition: opacity 400ms cubic-bezier(0.4, 0, 0.25, 1) 0ms;
+    transition: opacity 400ms cubic-bezier(0.4, 0, 0.25, 1) 0ms;
+}
+
+.post-card:hover .information .title, .post-card-detail:hover .information .title {
+    opacity: .7;
+}
+
+.post-card.small-p .information .title {
+    font-size: 18px;
+}
+
+.post-card .information .date {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #747474;
+}
+
+.post-card .information .tags-container {
+    display: flex;
+}
+
+.post-card .information .tags-container .tag {
+    background-color: rgb(10,132,255);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    margin-right: 6px;
+    margin-top: 16px;
+    text-decoration: none;
+}
+
+.post-card .information .tags-container .tag:hover {
+    text-decoration: underline;
+}
+
+.post-card-feature {
+    width: 100%;
+    height: 550px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    transition: all .25s ease;
+}
+
+.post-card-feature:active {
+    transform: scale(.95);
+}
+
+.post-card-feature .banner {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transition: transform 400ms cubic-bezier(0.4, 0, 0.25, 1) 0ms;
+    transition: transform 400ms cubic-bezier(0.4, 0, 0.25, 1) 0ms;
+}
+
+.post-card-feature .banner::after, .post-card .banner::after ,.post-card-detail .banner-container .banner::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    -webkit-transition: background 400ms cubic-bezier(0.4, 0, 0.25, 1) 0ms;
+    transition: background 400ms cubic-bezier(0.4, 0, 0.25, 1) 0ms;
+}
+
+.post-card-feature:hover .banner, .post-card:hover .banner {
+    transform: scale(1.05);
+}
+
+.post-card-feature:hover .banner::after, .post-card:hover .banner::after, .post-card-detail:hover .banner-container .banner::after {
+    background: rgba(0,0,0,.3)!important;
+}
+
+.post-card-feature .information {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 32px;
+    width: 100%;
+}
+
+.post-card-feature .information::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 250%;
+    z-index: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.77311) 12.83%, rgba(0,0,0,0.72685) 24%, rgba(0,0,0,0.66487) 33.77%, rgba(0,0,0,0.59081) 42.37%, rgba(0,0,0,0.50831) 50.07%, rgba(0,0,0,0.421) 57.13%, rgba(0,0,0,0.33252) 63.78%, rgba(0,0,0,0.24652) 70.3%, rgba(0,0,0,0.16663) 76.92%, rgba(0,0,0,0.09648) 83.91%, rgba(0,0,0,0.03973) 91.52%, rgba(0,0,0,0));
+    background-size: 100.1% 100.1%;
+    z-index: -1;
+}
+
+.post-card-feature .information .title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.post-card-feature .information .date {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.parallax {
+    width: calc(100% - 96px);
+    height: 400px;
+    margin: auto;
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.parallax::after{
+    content: " ";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0,0,0,.4);
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+
+.parallax h1  {
+    color: #fff;
+    font-size: 48px;
+    text-shadow: 0 0 6px rgba(0,0,0,.15);
+    z-index: 2;
+}
+
+.code-container{
+    width: 100%;
+    padding: 16px;
+    background-color: #f3f3f3;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.view {
+    width: 100%;
+    max-width: 980px;
+    margin: auto;
+}
+
+.view h1 {
+    margin: 48px 0 32px 0;
+    font-size: 32px;
+    font-weight: 600;
+    color: #1d1d1f;
+}
+
+nav {
+    width: 100%;
+    height: 64px;
+    box-sizing: border-box;
+    padding: 16px 48px;
+    display: flex;
+    align-items: center;
+    z-index: 999999;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255,255,255,.75);
+    backdrop-filter: blur(20px) saturate(180%);
+}
+
+nav a img {
+    width: 150px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 16px;
+}
+
+nav ul li.active a {
+    color: rgb(10,132,255);
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:#000;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.home-view {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-navigate-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+    border-radius: 14px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    width: 400px;
+    height: 400px;
+    cursor: pointer;
+    transition: all .25s ease;
+    text-decoration: none;
+    margin: 24px;
+    position: relative;
+}
+
+.page-navigate-card:hover {
+    transform: scale(1.05);
+}
+
+.page-navigate-card:active {
+    transform: scale(.95);
+}
+
+.page-navigate-card .image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 14px;
+}
+
+.page-navigate-card .information {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 22px 24px;
+    position: absolute;
+    bottom: 0;
+}
+
+.page-navigate-card .information .name span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+.page-navigate-card .information .desc p {
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+    margin-top: 8px;
+}
+
+body, html {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    padding-top: 32px;
+}
